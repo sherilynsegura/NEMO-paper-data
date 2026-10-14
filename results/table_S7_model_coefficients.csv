@@ -1,0 +1,9 @@
+group,predictor_or_contrast,estimate,standard_error,t_statistic,degrees_of_freedom,p_value,confidence_interval_95
+Pooled experiments,Intercept,0.179,0.008,23.41,5904,< .001,"[0.164, 0.194]"
+Pooled experiments,Chose source,0.013,0.007,1.87,3369,.062,"[−0.001, 0.026]"
+Pooled experiments,Learner: child (vs caregiver),0.183,0.006,28.24,2933,< .001,"[0.170, 0.196]"
+Pooled experiments,Age (centered within group),−0.001,0.001,−0.83,2919,.405,"[−0.002, 0.001]"
+Pooled experiments,Transmission: Vertical (vs Unrelated),0.017,0.008,2.20,14420,.028,"[0.002, 0.032]"
+Pooled experiments,Transmission: Oblique (vs Unrelated),0.022,0.007,3.05,14500,.002,"[0.008, 0.035]"
+Pooled experiments,Transmission: Horizontal (vs Unrelated),−0.011,0.007,−1.49,14940,.137,"[−0.024, 0.003]"
+Pooled experiments,Learner (child) × Age,−0.018,0.003,−7.08,2978,< .001,"[−0.023, −0.013]"

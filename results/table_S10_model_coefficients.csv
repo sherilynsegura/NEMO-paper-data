@@ -1,0 +1,11 @@
+group,predictor_or_contrast,estimate,standard_error,degrees_of_freedom,t_statistic,p_value,confidence_interval_95
+Experiment 1,Intercept,0.301,0.011,704.6,28.66,<.001,"[0.280, 0.321]"
+Experiment 1,Facing-away (vs face-to-face),−0.011,0.010,684.5,−1.07,.284,"[−0.032, 0.009]"
+Experiment 1,Source type: oblique (vs vertical),−0.023,0.013,1100,−1.83,.068,"[−0.047, 0.002]"
+Experiment 1,Source type: horizontal (vs vertical),−0.027,0.013,1107,−2.12,.034,"[−0.051, −0.002]"
+Experiment 1,Age (centered),−0.006,0.0003,727.8,−18.86,<.001,"[−0.006, −0.005]"
+Experiment 2,Intercept,0.310,0.006,1319,48.84,<.001,"[0.297, 0.322]"
+Experiment 2,4-present (vs 2-present),−0.014,0.009,528.3,−1.59,.112,"[−0.032, 0.003]"
+Experiment 2,Source type: oblique (vs vertical),−0.025,0.009,6617,−2.73,.006,"[−0.043, −0.007]"
+Experiment 2,Source type: horizontal (vs vertical),0.006,0.007,6835,0.80,.426,"[−0.008, 0.019]"
+Experiment 2,Age (centered),−0.006,0.0003,1160,−21.22,<.001,"[−0.006, −0.005]"

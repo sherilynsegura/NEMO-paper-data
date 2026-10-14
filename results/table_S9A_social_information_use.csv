@@ -1,0 +1,10 @@
+receiver,predictor,estimate,standard_error,t_statistic,degrees_of_freedom,p_value
+Children,Intercept,0.367,0.010,38.37,392,< .001
+Parents,Intercept,0.191,0.008,24.35,389,< .001
+Pooled,Intercept,0.276,0.006,44.49,780,< .001
+Children,Self-rated performance (centered),−0.012,0.006,−2.14,409,.033
+Parents,Self-rated performance (centered),−0.017,0.005,−3.14,392,.002
+Pooled,Self-rated performance (centered),−0.014,0.004,−3.53,803,< .001
+Children,Age (centered),−0.016,0.005,−3.59,393,< .001
+Parents,Age (centered),−0.002,0.002,−1.27,398,.204
+Pooled,Age (centered),−0.005,0.000,−14.09,792,< .001

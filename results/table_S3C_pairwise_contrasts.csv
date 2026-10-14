@@ -1,0 +1,7 @@
+receiver,contrast,estimate,z_statistic,p_value,adjustment
+Child,Vertical minus Oblique,0.008,0.46,1.000,Bonferroni
+Child,Vertical minus Horizontal,0.032,1.90,.173,Bonferroni
+Child,Oblique minus Horizontal,0.023,1.26,.626,Bonferroni
+Parent,Vertical minus Oblique,0.015,0.82,1.000,Bonferroni
+Parent,Vertical minus Horizontal,0.030,1.84,.197,Bonferroni
+Parent,Oblique minus Horizontal,0.015,0.84,1.000,Bonferroni

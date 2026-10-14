@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+type: dataset
+message: "Please cite the accompanying manuscript and the version of this dataset used."
+title: "Source selection shapes the strength of cultural transmission pathways: data and documentation"
+authors:
+  - family-names: "Segura"
+    given-names: "Sherilyn"
+  - family-names: "van den Bos"
+    given-names: "Wouter"
+  - family-names: "Gradassi"
+    given-names: "Andrea"
+  - family-names: "de Groot"
+    given-names: "Esra Cemre Su"
+  - family-names: "Hendrikse"
+    given-names: "Lucia"
+  - family-names: "Hofmans"
+    given-names: "Lieke"
+  - family-names: "Korzilius"
+    given-names: "Fleur"
+  - family-names: "Lew-Levy"
+    given-names: "Sheina"
+  - family-names: "da Silva Pinho"
+    given-names: "Ana"
+  - family-names: "Slagter"
+    given-names: "Scarlett"
+  - family-names: "van der Stappen"
+    given-names: "Sjanne"
+  - family-names: "Molleman"
+    given-names: "Lucas"
+abstract: "Processed trial-level data and documentation for an estimation-task study of source selection and social information use in children and parents at NEMO Science Museum."
+keywords:
+  - social learning
+  - cultural transmission
+  - development
+  - source selection

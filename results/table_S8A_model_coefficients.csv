@@ -1,0 +1,7 @@
+predictor,estimate,standard_error,degrees_of_freedom,t_statistic,p_value
+Intercept,0.256,0.003,"7,036",93.8,< .001
+Second estimate,−0.036,0.003,"22,870",−14.36,< .001
+Oblique vs. vertical,−0.023,0.004,"22,030",−5.19,< .001
+Horizontal vs. vertical,−0.018,0.004,"25,420",−4.70,< .001
+Second estimate × oblique,−0.003,0.005,"22,870",−0.64,.520
+Second estimate × horizontal,< 0.001,0.004,"22,870",0,.997

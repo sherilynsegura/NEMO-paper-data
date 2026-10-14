@@ -1,0 +1,7 @@
+# Local and editor files
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+*.tmp

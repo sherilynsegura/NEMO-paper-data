@@ -1,0 +1,67 @@
+variable,description,documented_scale,respondent,observed_waves,observed_values,missing_rows,item_wording_or_legend,notes
+wave_source,Original collection-wave label,2021; 2022; 2023-1; 2023-2; 2024-1; 2024-2; 2024-3; 2025-1; 2025-2; 2025-3,system,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,2021; 2022; 2023-1; 2023-2; 2024-1; 2024-2; 2024-3; 2025-1; 2025-2; 2025-3,0,,Maps to wave 1–10 in chronological order.
+wave,Sequential collection-wave number,Integer 1–10,system,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,0,wave number,Collection-year labels are stored separately in wave_source.
+group,Unique group identifier,integer,system,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,1001 to 10079 (1385 distinct values),0,unique group number,
+ppt,Unique participant identifier,integer,system,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,1002 to 10346 (3139 distinct values),0,unique participant number,
+age,Age of participant,years,system,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,4 to 69 (55 distinct values),35,age of participant,
+sex,Sex of participant,1=male; 2=female; 3=other,system,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,1; 2; 3,20,sex of participant (1=male; 2=female; 3=other),
+seatingType,Seating arrangement,1=face-to-face; 2=facing away; 3=divider,system,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,1; 2; 3,0,1=face to face; 2=facing away; 3=divider wall,
+period,Period in the game,integer,system,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,0,period in the game,
+choseSource,Whether a social source could be selected,0=assigned source; 1=participant could choose source,system,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,0; 1,0,could source be selected by ppt?,
+socialSource,Type of social source,0=unknown; 1=group mate; 2=other adult; 3=other child,system,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,0; 1; 2; 3,1,0=unknown to participant; 1=group mate; 2=other adult; 3=other child,
+nAnimals,Correct number of animals in the round,integer,task,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,0; 59; 69; 74; 78; 93,1,correct number of animals in this round,
+firstEstimate,Initial estimate before social info,"numeric, 1-150",participant,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,1 to 150 (147 distinct values),9,firstEstimate,
+socialInfo,Information provided by social source,numeric,system,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,0 to 150 (145 distinct values),0,socialInfo,
+secondEstimate,Estimate after social info,"numeric, 1-150",participant,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,1 to 150 (149 distinct values),34,secondEstimate,
+sourceAge,Age of social source (child only),years,system,2,6; 7; 8; 9; 10; 11; 12; 13; 14,16970,NA for adult sources,NA for adult sources
+competenceLadder,Self-efficacy ladder rating,1 (low) – 10 (high) stick figure on ladder,participant,2; 3; 4; 5,0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10,11475,self efficacy (click on stick figure on ladder: 1=low; 10=high),Optional item: 0 means not completed. Treat 0 as missing for analysis; stored values are unchanged.
+trust,General interpersonal trust,1–7 Likert,participant,2,1; 2; 3; 4; 5; 6; 7,13230,"""Do you agree with this statement? I see myself as someone who generally trusts other people."" (1=disagree strongly; 7=agree strongly)",Single-item
+independence,Importance of child independence,1–7 slider,parent,2; 3; 4; 5; 6,2; 3; 4; 5; 6; 7,9880,parent-rated emphasis on... independence,
+obedience,Importance of child obedience,1–7 slider,parent,2; 3; 4; 5; 6,1; 2; 3; 4; 5; 6; 7,9880,… obedience,
+PSQ_equal,Treat child as equal family member,1–7 slider,parent,2; 3; 4; 5; 6,1; 2; 3; 4; 5; 6; 7,9880,"I treat my child as an equal member of the family. (slider, 1=never; 7=always)",
+PSQ_isayso,Authoritarian justification style,1–7 slider,parent,2; 3; 4; 5; 6,1; 2; 3; 4; 5; 6; 7,9900,"When my child asks me why he/she has to do something, I tell him/her: ""because I said so"", ""because I am your parent"", or ""because that is what I want"". (slider, 1=never; 7=always)",
+competenceLadderOther,Rated efficacy of other group member,1–10,participant,3; 4; 5,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,16430,rated efficacy of the other in the group (click on stick figure on ladder: 1=low; 10=high),
+IOS,Inclusion of Other in Self,1–7 pictorial,participant,3; 4; 5; 6,1; 2; 3; 4; 5; 6; 7,14735,Which picture best describes your relationship with the people whose guesses you saw?,
+PSQ_responsible,Emphasis on responsibility,1–7,parent,3; 4; 5; 6,1; 3; 4; 5; 6; 7,14830,"… own responsibility, 1-7",
+ageOther,Age of other dyad member,years,system,3,5 to 58 (29 distinct values),17720,age of the other particpant in the group,
+sexOther,Sex of other dyad member,1=male; 2=female; 3=other,system,3,1; 2,17720,"sex of the other participant in the group (1=male, 2=female, 3=other)",
+treatment,Assigned social-source condition (Wave 4),1=assigned other child; 2=assigned other adult,system,4,1; 2,17250,,Wave 4 (2023-2) only. Proposed source-condition mapping matches every nonmissing record: 1 corresponds to socialSource=3; 2 to socialSource=2. Use socialSource for comparisons across waves.
+shownAge,Age shown for social source (child only),years,system,4; 6,5; 6; 7; 8; 9; 10; 11; 12; 13; 18,16855,age of the social source (for social source=child: age; for social source=adult: NA) - should be matched with age of child in the pair,Matched to child age
+IOS_otherChildren,IOS with age-mates,1–7 pictorial,child,5,1; 2; 3; 4; 5; 6; 7,17655,"inclusion of the other in the self, with age-mates",
+PSQ2_strictRules,Strict rule enforcement,1–7 slider,parent,5,1; 2; 3; 4; 5; 6,17160,"I impose strict rules on my children without considering their opinion (slider, 1 = never, 7 = always)",Same item: PSQ2_strictRules in wave 5; PSQ_strictRules in wave 6. Combine by wave when pooling.
+PSQ_strictRules,Strict rule enforcement (alternate column name),1–7 slider,parent,6,1; 2; 3; 4; 5; 6; 7,17270,"I impose strict rules on my children without considering their opinion (slider, 1 = never, 7 = always)",Same item: PSQ2_strictRules in wave 5; PSQ_strictRules in wave 6. Combine by wave when pooling.
+genderChild,Child gender,1=male; 2=female; 3=other,system,7,1; 2; 3,15810,,
+genderParent,Parent gender,1=male; 2=female; 3=other,system,7,1; 2,15810,,
+ageParent,Parent age,years,system,7,31 to 61 (29 distinct values),15810,,
+ageChild,Child age,years,system,7,5; 6; 7; 8; 9; 10; 11; 12; 13; 14,15810,,
+selfEsteemParent,Child self-esteem,1-7 ladder,parent,7,1; 2; 3; 4; 5; 6; 7,15810,"self esteem of child, parent rating on ladder",
+selfEsteemChild,Self-esteem,1-7 ladder,child,7,1; 2; 3; 4; 5; 6; 7,15810,"self esteem of child, self rated on ladder",
+agreeParent,Child agreeableness,2-14 TIPI,parent,7,4; 5; 7; 8; 9; 10; 11; 12; 13; 14,15810,"agreeableness of child, rated by parent with TIPI, 2-14",Range: 2–14. Item construction and reverse-scoring details are not supplied.
+agreeChild,Agreeableness,1-10 pictorial,child,7,3; 4; 5; 6; 7; 8; 9,15810,"agreeableness of child, rated with pictorial questionnaire",
+consciParent,Child conscientiousness,2-14 TIPI,parent,7,2; 4; 5; 6; 7; 8; 9; 10; 11; 12; 13; 14,15810,"conscientiousness of child, rated by parent with TIPI, 2-14",Range: 2–14. Item construction and reverse-scoring details are not supplied.
+consciChild,Conscientiousness,1-10 pictorial,child,7,3; 4; 5; 6; 7; 8; 9,15810,"conscientiousness of child, rated with pictorial questionnaire",
+extravParent,Child extraversion,2-14 TIPI,parent,7,3; 4; 5; 6; 7; 8; 9; 10; 11; 12; 13; 14,15810,"extraversion of child, rated by parent with TIPI, 2-14",Range: 2–14. Item construction and reverse-scoring details are not supplied.
+extravChild,Extraversion,1-10 pictorial,child,7,3; 5; 6; 7; 8; 9,15810,"extraversion of child, rated with pictorial questionnaire",
+schooltype,School type,1=traditional; 2=free/alternative; 3=other,parent,8,1; 2; 3,15960,1=traditional; 2=free/alternative; 3=other,
+coopSchool,Cooperation at school,1–4,parent,8,1; 2; 3; 4,15730,"degree of cooperation at school (1 = low, 4 = high)",
+coopSports,Cooperation in sports,1–4,parent,8,1; 2; 3; 4; 99,15760,"degree of cooperation at sports (1 = low, 4 = high)",Optional item: 99 means not completed. Treat 99 as missing for analysis; stored values are unchanged.
+parentanswerTeamSport,Child sport participation,1 = yes; 2 = no my child does not do a team sport; 3 = no physical sport,parent,8,1; 2; 3,15730,"does your child do a team sport? (1 = yes, 2 = no my child does not do a team sport, 3 = no physical sport)",
+olderSibs,Number of older siblings,integer,parent,8; 9,0; 1; 2; 3; 4; 5,13190,number of older siblings of the child,
+youngerSibs,Number of younger siblings,integer,parent,8; 9,0; 1; 2; 3; 5,13190,number of younger siblings of the child,
+dyad,Unique family dyad identifier,integer,system,9; 10,90011 to 100792 (386 distinct values),14310,"family within the session (unique numbers; based on variable ""group"", with ""1"" or ""2"" appended)","Family ID in waves 9–10, constructed from group with a suffix. Use group for family matching in waves 1–8 and dyad in waves 9–10."
+subjectNr,Within-room subject/tablet number,1–4,system,9; 10,1; 2; 3; 4,14310,,"Subject/tablet number in waves 9–10, with two dyads per room. Use ppt for participant identity and dyad for family pairing."
+IOS_parents,Parent-rated IOS,1-7 pictorial,parent,9,1; 2; 3; 4; 5; 6; 7,15630,Which picture best describes your relationship with your child (with whom you just played this game)?,Same item: IOS_parents in wave 9; IOS_parent in wave 10. Combine by wave when pooling.
+siblingsChild,Sibling-related item,Observed 1; 2,requires confirmation,9,1; 2,15630,,Codes 1/2 are undocumented. Not used in the analyses; retained in the full dataset.
+IOS_sibs,Sibling relationship closeness (Inclusion of Other in Self),1–7 pictorial,Not specified,9,1; 2; 3; 4; 5; 6; 7,15960,Which picture best describes your relationship with your sibling?,Wording and scale are confirmed; respondent and handling of children without siblings are unspecified.
+childrenInHousehold,Number of siblings,integer,parent,10,0; 1; 2; 3; 4; 5,17030,How many siblings does your child grow up with?,
+statusLadder,Perceived self peer status,0-7 ladder,child,10,0; 1; 2; 3; 4; 5; 6; 7,16850,Here is a picture of a ladder. Imagine the top step on the ladder is for the most liked student in your class. And the bottom step on the ladder is for the least liked student in your class. Where would you place yourself on this ladder?,
+autonomy1,Autonomy support items,1-5 Likert,child,10,1; 2; 3; 4; 5,16850,"I often decide for myself what I do. (1 = completely untrue, 5 = completely true)",
+autonomy2,Autonomy support items,1-5 Likert,child,10,1; 2; 3; 4; 5,16850,"When I am not allowed to do something, my parents tell me why. (1 = completely untrue, 5 = completely true)",
+autonomy3,Autonomy support items,1-5 Likert,child,10,1; 2; 3; 4; 5,16850,"My parents often understand how I feel. (1 = completely untrue, 5 = completely true)",
+parentalLeave,Months of parental leave,months,parent,10,0 to 118 (24 distinct values),16850,"Regarding the child playing with you today, for how many months after birth was at least one parent home with the child full-time? (If both parents stayed home at the same time, count those months only once)",
+showHow,Parental scaffolding behavior,1–4,parent,10,1; 2; 3; 4,16850,"I always first show my child how to do something before he/she tries it themselves. (1 = completely untrue, 4 = completely true)",
+selfEfficacy,Child perseverance belief,1–4,parent,10,2; 3; 4,16850,"My child believes in themselves and perseveres even when things don’t work out right away. (1 = completely untrue, 4 = completely true)",
+IOS_parent,Parent-rated IOS,1-7 pictorial,parent,10,2; 3; 4; 5; 6; 7,16850,Which picture best describes your relationship with your child (with whom you just played this game)?,Same item: IOS_parents in wave 9; IOS_parent in wave 10. Combine by wave when pooling.
+IOS_child,Child-rated IOS,1-7 pictorial,child,10,1; 2; 3; 4; 5; 6; 7,16850,Which picture best describes your relationship with your parent (you just played this game with)?,
+z_resid,Age-adjusted initial estimation error residual,"Continuous, standardized",derived,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,-2.31984341920187 to 6.52104348366845 (2100 distinct values),35,,Participant mean absolute initial error regressed on age; residual divided by residual sample SD and joined by ppt.
+s_adj,Social information use (adjustment score),(secondEstimate-firstEstimate)/(socialInfo-firstEstimate),derived,1; 2; 3; 4; 5; 6; 7; 8; 9; 10,-57 to 76 (1470 distinct values),256,,"NA if any required estimate is missing or socialInfo equals firstEstimate. Values outside [0,1] are preserved here and filtered in most analyses."

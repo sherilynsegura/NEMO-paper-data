@@ -1,0 +1,18 @@
+analysis_id,analysis,data,model,sample,reported_result,location_as_supplied
+P1,Offspring resemble their parents in social information use,Wave 2,Spearman rank correlation,236 dyads,"ρ = −.04, p = .551",Fig. S1
+P1.E1,"Same, full sample",Waves 1–10,Spearman rank correlation,"1,281 dyads","ρ = .04, p = .108",Fig. 4A
+P1.E2,"Same, ages 6–8",Waves 1–10,Spearman rank correlation,453 dyads,"ρ = .02, p = .737",Fig. S1
+P1.E3,"Same, ages 9–11",Waves 1–10,Spearman rank correlation,673 dyads,"ρ = .08, p = .044",Fig. S1
+P1.E4,"Same, ages 12–18",Waves 1–10,Spearman rank correlation,155 dyads,"ρ = .04, p = .108",Fig. S1
+P2,Children use more social information from unrelated adults than peers,"Waves 2, 4",s ~ source + (1｜ppt),"336 children, 1,411 trials","b = −0.014, SE = 0.024, t(316) = −0.60, p = .551",Main text; Fig. 2
+P3,Children use more social information than parents,Waves 1–6,s ~ receiver + (1｜ppt),"1,366 participants, 8,057 trials","b = 0.185, SE = 0.010, t(1,309) = 19.08, p < .001",Main text; Fig. 2
+P4,Younger children use more than older children,Waves 1–6,s ~ age_c + source + (1｜ppt),"688 children, 3,862 trials","b = −0.017, SE = 0.004, t(647) = −4.51, p < .001",Main text; Figs. 2; Table S2
+P5,"For children, vertical > oblique and vertical > horizontal",Waves 1–6,"s ~ receiver × transmission + (1｜ppt), post hoc contrasts","1,362 participants, 5,890 trials","V−O z = 0.46, p = 1.000; V−H z = 1.90, p = .173",Main text; Fig 2; Table S2
+P5.E1,"Same, extended to age and parents",Waves 1–6,s ~ age_c × transmission × age_group + (1｜ppt),"1,183 participants, 5,039 trials","Age × horizontal b = 0.019, p = .030",Main text; Table S3; Fig. 2
+E1,Source choice as a function of age,Waves 7–10,"Multinomial logistic, transmission ~ age, fitted separately for children and parents","Children 834 (4,169 trials); parents 823 (4,095 trials)","Vertical preferred in both groups (children, oblique vs. vertical OR = 0.17; parents OR = 0.09); no significant age effects (all p > .08)",Main text; Table S3; Fig. 3A–B
+E2,Child information use by chosen source,Waves 7–10,s ~ age_c × transmission + (1｜ppt),"827 children, 3,371 trials","Age b = −0.018, p < .001; age × oblique b = −0.016, p = .028",Main text; Table S4A; Fig. 3C
+E3,Parent information use by chosen source,Waves 7–10,s ~ age_c × transmission + (1｜ppt),"809 parents, 2,629 trials","Oblique vs. vertical b = −0.062, p < .001",Main text; Table S4B; Fig. 3D
+E4,Estimate accuracy before and after social information,Waves 1–10,prop_error ~ estimate (× receiver) + (1｜ppt),"3,048 participants, 26,064 trials","Estimate b = −0.037, p < .001; interaction b = −0.045, p < .001",Main text; Fig. 4B–C
+E5,Accuracy gain by transmission pathway,Waves 1–10,prop_error ~ estimate × source + (1｜ppt),"3,048 participants, 26,064 trials","Interaction LRT χ²(2) = 0.46, p = .794",Main text; Fig. 4D; Table S6;
+E6,Self-rated performance and social information use,Waves 2–5,s ~ competence_c + age_c + (1｜ppt),"824 participants, 5,774 trials","b = −0.014, SE = 0.004, p < .001",Main text; Fig. 4E; Table S7A
+E7,Self-rated performance and estimation accuracy,Waves 2–5,abs error ~ competence_c + age_c + (1｜ppt),"824 participants, 5,774 trials","Parents b = −0.496, p = .020; children b = 0.028, p = .918",Main text; Fig. 4F; Table S7B
