@@ -2,7 +2,7 @@
 
 Research data and documentation accompanying the manuscript **Source selection shapes the strength of cultural transmission pathways**, by Sherilyn Segura, Wouter van den Bos, Andrea Gradassi, Esra Cemre Su de Groot, Lucia Hendrikse, Lieke Hofmans, Fleur Korzilius, Sheina Lew-Levy, Ana da Silva Pinho, Scarlett Slagter, Sjanne van der Stappen, and Lucas Molleman.
 
-Children and caregivers estimate the number of animals, view another person's estimate, and revise their answer. The study examines source choice, information weighting, age differences, caregiver–child resemblance, and estimation accuracy.
+Children and caregivers estimate the number of animals, view another person's estimate, and provide a second estimate. The study examines source choice, information weighting, age differences, caregiver–child resemblance, and estimation accuracy.
 
 **Status:** local draft; not yet published to GitHub. Full-data sharing is authorized. The reuse license and remaining analysis specifications need confirmation.
 
@@ -20,7 +20,6 @@ Children and caregivers estimate the number of animals, view another person's es
 | `results/README.md` | Results format, provenance and source issues. |
 | `CITATION.cff` | Dataset citation metadata. |
 
-Original analysis scripts and raw wave files are not included.
 
 ## Study design
 
