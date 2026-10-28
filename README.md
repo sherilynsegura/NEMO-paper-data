@@ -4,8 +4,6 @@ Research data and documentation accompanying the manuscript **Source selection s
 
 Children and caregivers estimate the number of animals, view another person's estimate, and provide a second estimate. The study examines source choice, information weighting, age differences, caregiver–child resemblance, and estimation accuracy.
 
-**Status:** local draft; not yet published to GitHub. Full-data sharing is authorized. The reuse license and remaining analysis specifications need confirmation.
-
 ## Files
 
 | File | Contents |
@@ -19,9 +17,8 @@ Children and caregivers estimate the number of animals, view another person's es
 | `PROVENANCE.md` | Data origin and processing steps. |
 | `CITATION.cff` | Dataset citation metadata. |
 
-Edited copies of the reported analysis and plotting scripts are in `src/r`. Raw wave files are not included.
-=======
->>>>>>> a24ad6a86319284b624c139478a670ad8fea50fb
+Reported analysis and plotting scripts are in `src/r`. 
+
 
 ## Study design
 
@@ -31,14 +28,15 @@ Sources include the participant's family member, another adult, and another chil
 
 Preregistration: [OSF 9xn87](https://osf.io/9xn87). Assigned-source analyses include registered hypotheses and later-wave extensions. Source-choice and accuracy/confidence analyses are exploratory. Ethics approval: University of Amsterdam, 2021-DP-13852.
 
+
 ## Use the data
 
 Open the CSV with its header row as variable names. Fields are comma-separated, decimals use a point, and `NA` indicates missing values. Treat IDs as identifiers and source codes as categories.
 
 Read `CODEBOOK.md` before applying `ANALYSIS_GUIDE.md`. Filters differ by analysis. Use `ppt` to link repeated participant trials and the specified family ID to pair caregivers with children. Count repeated questionnaire responses once per respondent. Treat `coopSports=99` as nonresponse when analyzing that item.
 
-## Reproduce results
 
+## Reproduce results
 
 Run the scripts from the repository root with `source("src/r/_run_all.R")` in R. Fresh outputs go to `outputs/` by default. Set `NEMO_OUTPUT_DIR` before running to keep generated files outside the repository. See [src/r/README.md](src/r/README.md) for dependencies.
 
@@ -49,6 +47,7 @@ H1 uses Spearman correlations across the paired sample and age subsets. H2 uses 
 Compare generated statistics with the manuscript and supplementary tables. H1 uses Spearman only. See `ANALYSIS_GUIDE.md` for the Wave 2 trial-scope distinction and interval-method limitations.
 
 Analyses use R with dplyr/tidyr, lme4/lmerTest, emmeans and plotting packages. The recorded version list is R 4.6.0, lme4 2.0-1, lmerTest 3.2-1, mclogit 0.9.15, emmeans 2.0.3 and MuMIn 1.48.19. The copied mixed multinomial models use mclogit with participant random intercepts. Each run records its installed package versions and fit warnings.
+
 
 ## Citation and reuse
 
