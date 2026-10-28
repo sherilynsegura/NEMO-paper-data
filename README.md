@@ -11,6 +11,7 @@ Children and caregivers estimate the number of animals, view another person's es
 | `data/nemo_analysis_data.csv` | Processed data: 18,170 trials, 66 variables, 10 waves. |
 | `CODEBOOK.md` | Variable definitions, coding and family linkage. |
 | `codebook.csv` | Variable dictionary with observed values, wave coverage and missing counts. |
+| `src/r/` | Numbered R scripts, shared setup and batch runner. |
 | `ANALYSIS_GUIDE.md` | Instructions and a result index covering all main results, S1–S12, and supplementary statistical figures. |
 | `DATA_SUMMARY.md` | Dataset counts and validation checks. |
 | `PROVENANCE.md` | Data origin and processing steps. |
