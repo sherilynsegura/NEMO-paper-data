@@ -1,6 +1,0 @@
-group,predictor_or_contrast,estimate,standard_error,degrees_of_freedom,t_statistic,p_value,confidence_interval_95
-Model coefficients,"Intercept (anonymous source, mean child age)",0.349,0.012,"1,182",29.56,< .001,"[0.325, 0.372]"
-Model coefficients,Child age (centered),−0.017,0.004,647,−4.51,< .001,"[−0.024, −0.010]"
-Model coefficients,Vertical vs. anonymous,0.034,0.017,937,1.96,.051,"[0.000, 0.068]"
-Model coefficients,Oblique vs. anonymous,0.026,0.013,"3,844",2.01,.044,"[0.001, 0.052]"
-Model coefficients,Horizontal vs. anonymous,0.004,0.013,"3,767",0.35,.726,"[−0.021, 0.029]"

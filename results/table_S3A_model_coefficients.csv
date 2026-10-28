@@ -1,7 +1,0 @@
-predictor,estimate,standard_error,degrees_of_freedom,t_statistic,p_value
-"Intercept (child, vertical)",0.386,0.012,"1,397",33,< .001
-Receiver: parent,−0.188,0.016,"1,361",−11.38,< .001
-Oblique vs. vertical,−0.008,0.018,"1,361",−0.46,.648
-Horizontal vs. vertical,−0.032,0.017,"1,363",−1.90,.058
-Parent × oblique,−0.007,0.026,"1,315",−0.26,.799
-Parent × horizontal,0.001,0.024,"1,329",0.06,.953

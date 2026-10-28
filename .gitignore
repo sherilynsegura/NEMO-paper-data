@@ -5,3 +5,6 @@
 .Rproj.user/
 __pycache__/
 *.tmp
+
+# Regenerated models, plots and execution logs
+/outputs/

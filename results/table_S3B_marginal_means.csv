@@ -1,7 +1,0 @@
-receiver,pathway,estimated_mean,standard_error
-Child,Vertical,0.386,0.012
-Child,Oblique,0.377,0.014
-Child,Horizontal,0.354,0.012
-Parent,Vertical,0.198,0.012
-Parent,Oblique,0.183,0.014
-Parent,Horizontal,0.168,0.012

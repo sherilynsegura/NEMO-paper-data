@@ -2,6 +2,8 @@
 
 ## Data and conventions
 
+Run `source("src/r/_run_all.R")` from the repository root, or run the numbered script for the analysis of interest. Fresh model results are written to `outputs/` by default; set `NEMO_OUTPUT_DIR` before running to save them outside the repository.
+
 Read `data/nemo_analysis_data.csv`, treating `NA` as missing. Each row represents one participant's trial. Use the stored `s_adj` and `z_resid` values.
 
 - **Valid s:** nonmissing `s_adj` between 0 and 1, inclusive.
@@ -15,7 +17,7 @@ Read `data/nemo_analysis_data.csv`, treating `NA` as missing. Each row represent
 
 Apply each analysis's filters below. Require complete eligible families and at least three valid trials per member for H1 only. For individual-level analyses, retain eligible participants even when their family member fails an individual criterion.
 
-Fit linear mixed models with REML unless maximum likelihood (ML) is specified. Use ML for likelihood-ratio comparisons of models with different fixed effects. Obtain comparison values from the table-specific CSVs listed in `results/README.md`.
+Fit linear mixed models with REML unless maximum likelihood (ML) is specified. Use ML for likelihood-ratio comparisons of models with different fixed effects. Compare generated values with the manuscript and supplementary tables.
 
 ## Result index
 
@@ -33,7 +35,7 @@ Fit linear mixed models with REML unless maximum likelihood (ML) is specified. U
 | Live-source distance effects (Figure S3) | Distance discounting |
 | One/two-dyad child plots (Figure S4) | Configuration-specific child analyses |
 
-S1 is the analysis inventory, not an additional model. S2–S12 correspond to the table-specific CSVs in [results/README.md](results/README.md). H1 uses Spearman throughout.
+S1 is the analysis inventory, not an additional model. S2–S12 report the supplementary results. H1 uses Spearman throughout.
 
 ## H1 Caregiver–offspring resemblance
 
@@ -47,7 +49,7 @@ Compute the **Spearman rank correlation** between caregiver S and child S. Repea
 
 Apply the H1 family rules to Wave 2 and compute Spearman correlation. The 236-family output in the reference table uses all ten periods. Anonymous-only Part A requires `period≤5` and `socialSource=0`, giving 205 eligible families. Match the selected trial scope to its reference result; these samples are not interchangeable.
 
-For subset intervals, record the Spearman interval method and tie handling. The CSV intervals are reference values; their generating procedure has not been independently reconstructed.
+Calculate approximate 95% confidence intervals for Spearman’s rho using the Fisher-z transformation: `tanh(atanh(rho) ± qnorm(0.975) / sqrt(n - 3))`, where `n` is the number of paired families. Spearman p-values use the asymptotic test for tied data.
 
 ## H2 Adult versus peer source
 
@@ -71,7 +73,7 @@ Fit `s_adj ~ age_c + factor(socialSource) + (1|ppt)`. Sample: 688 children; 3,86
 
 Select waves 1–6, `choseSource=0`, `socialSource` in {1,2,3}, nonmissing age ≥6, valid s, and the performance filter. Set child as the receiver reference and source 1 as the source reference.
 
-Fit `s_adj ~ receiver * factor(socialSource) + (1|ppt)`. Obtain estimated marginal means and Bonferroni-corrected source contrasts within each receiver. For children, compare source 1 (vertical) with source 2 (oblique) and source 3 (horizontal). For caregivers, source 2 is horizontal and source 3 is oblique. Sample: 1,362 participants; 5,890 trials.
+Fit `s_adj ~ receiver * factor(socialSource) + (1|ppt)`. Obtain estimated marginal means and Bonferroni-corrected source contrasts within each receiver. For children, compare source 1 (vertical) with source 2 (oblique) and source 3 (horizontal). For caregivers, source 2 is horizontal and source 3 is oblique. Sample: 1,362 participants; 5,890 trials. Script 09 labels source codes 1/2/3 as Vertical/Oblique/Horizontal for both receivers. In caregiver output, the labels Oblique and Horizontal therefore denote physical source codes 2 (another adult; horizontal) and 3 (another child; oblique), respectively. Interpret caregiver marginal means and contrasts using that reversal. Receiver-by-source coefficient interactions compare physical source codes; reporting interactions by receiver-relative pathway requires explicitly transformed contrasts or a documented recoding, not merely swapping coefficient labels.
 
 ## Age and transmission
 
@@ -90,7 +92,7 @@ Require a defined transmission category and age predictor ≥6. Center age on th
 
 Select chosen-source waves 7–10, nonmissing age 6–70, identifiable sources 1–3, and missing `z_resid` or `abs(z_resid) < 3`. Retain source choices regardless of s validity. Map transmission from the receiver's perspective.
 
-Use own age for children. For caregivers, join their own child's age by family, independently of the selected source. Center age within each model sample. Fit separate mixed multinomial models for children and caregivers, with transmission as outcome, centered age as predictor, vertical as reference, and participant random intercepts. Calculate odds ratios and Wald confidence intervals. Use a mixed multinomial engine such as `mclogit::mblogit`. Repeat the caregiver model using centered caregiver age for the additional own-age result in S5. Keep own-child age and caregiver age as separate model specifications. Test the age terms jointly by comparing the age model with its intercept-only counterpart using the same sample and fitting method.
+Use own age for children. For caregivers, join their own child's age by family, independently of the selected source. Center age within each model sample. Fit separate mixed multinomial models for children and caregivers, with transmission as outcome, centered age as predictor, vertical as reference, and participant random intercepts. Calculate odds ratios and Wald confidence intervals. Use a mixed multinomial engine such as `mclogit::mblogit`. Repeat the caregiver model using centered caregiver age for the additional own-age result in S5. Keep own-child age and caregiver age as separate model specifications. The existing source-selection script reports individual age coefficients; it does not export a joint age-term likelihood-ratio test.
 
 ## Information weighting after source selection
 
@@ -104,7 +106,7 @@ Center the age predictor on the pooled trial-row mean within receiver. Fit `s_ad
 
 Select all waves with valid s, nonmissing age ≥6, nonmissing source, and the performance filter. Center age within receiver using retained trial rows. Treat source as categorical with source 0 as reference.
 
-Fit `s_adj ~ choseSource + receiver * age_c + factor(socialSource) + (1|ppt)`.
+Fit `s_adj ~ choseSource + receiver * age_c + factor(socialSource) + (1|ppt)`. Script 17a controls for physical source codes: 0 is anonymous/unknown, 1 own family member, 2 another adult, and 3 another child. Its Oblique/Horizontal output labels refer to codes 2/3 and do not express receiver-relative pathways for caregivers. Preserve this model when reproducing the existing S7 results.
 
 ## Estimation accuracy
 
@@ -116,25 +118,25 @@ Reshape each trial into first/second estimate records. Fit models with participa
 - `proportional_error ~ estimate * receiver + (1|ppt)`
 - `proportional_error ~ estimate * transmission + (1|ppt)`
 
-Compare the transmission-interaction model with its additive counterpart using an ML likelihood-ratio test. Calculate estimated marginal E1−E2 improvements by pathway with Bonferroni correction and asymptotic inference. Sample: 3,048 participants; 26,064 estimate records.
+Compare the transmission-interaction model with its additive counterpart using an ML likelihood-ratio test. Calculate estimated marginal E1−E2 improvements by pathway with Bonferroni correction and asymptotic inference. Sample: 3,048 participants; 13,032 task trials reshaped to 26,064 before/after estimate records.
 
 For age plots, average each error measure per participant and fit LOESS smoothers with 95% confidence bands. For before/after pathway summaries, group the eligible estimate records by receiver and transmission. Repeat within assigned-source (`choseSource=0`) and chosen-source (`choseSource=1`) conditions for the experiment-specific summaries. Estimate E1−E2 differences separately within receiver from the receiver-interaction model.
 
 ## Self-rated performance
 
-Select assigned-source waves 2–5, nonmissing age ≥6, valid s, and the performance filter. Treat `competenceLadder=0` as missing and retain completed ratings. Center competence and age separately within each receiver-specific and pooled model sample.
+Select assigned-source waves 2–5, nonmissing age ≥6, valid s, and the performance filter. Retain nonmissing self-rated performance values. Center competence and age separately within each receiver-specific and pooled model sample.
 
-Fit `s_adj ~ competence_c + age_c + (1|ppt)` and `abs(firstEstimate − nAnimals) ~ competence_c + age_c + (1|ppt)`. Export fixed effects and participant/residual SDs. Accuracy is measured in animal counts here, rather than proportional error. Excluding nonresponse code 0 changes the comparison sample; existing transcribed output has not been regenerated under that correction.
+Fit `s_adj ~ competence_c + age_c + (1|ppt)` and `abs(firstEstimate − nAnimals) ~ competence_c + age_c + (1|ppt)`. Export fixed effects and participant/residual SDs. Accuracy is measured in animal counts here, rather than proportional error.
 
 ## Seating and testing configuration
 
 Define participant ID `uid=(wave,group,ppt)` and session ID `grp=(wave,group)`. Retain nonmissing age and center it on this preparation sample. Use receiver-dependent source categories.
 
-For waves 1–6, define seating as face-to-face in waves 1–2 and facing-away in waves 3–6. Retain nonmissing s and identifiable source categories, excluding anonymous source 0. Fit `s_adj ~ seating + age_c + source + (1|grp) + (1|uid)`.
+For waves 1–6, define seating as face-to-face in waves 1–2 and facing-away in waves 3–6. Retain valid s and identifiable source categories, excluding anonymous source 0. Fit `s_adj ~ seating + age_c + source + (1|grp) + (1|uid)`.
 
-For waves 7–10, define configuration as two people in waves 7–8 and four people in waves 9–10. Retain nonmissing s and source categories. Fit `s_adj ~ configuration + source + age_c + (1|grp) + (1|uid)`.
+For waves 7–10, define configuration as two people in waves 7–8 and four people in waves 9–10. Retain valid s and source categories. Fit `s_adj ~ configuration + source + age_c + (1|grp) + (1|uid)`.
 
-Use REML and the `bobyqa` optimizer. These preparation rules do not apply the shared s-bound, minimum-age or performance filters automatically.
+Use REML and the `bobyqa` optimizer. These fits use valid s but do not additionally apply the shared minimum-age or performance filters.
 
 For configuration effects on source selection, retain identifiable source choices and fit mixed multinomial models `transmission ~ configuration`, with participant random intercepts and vertical as reference. Fit children, caregivers and pooled data separately.
 
@@ -158,8 +160,8 @@ For source-choice bars, divide pathway trial counts by all eligible choice trial
 
 For family scatterplots, plot one paired S record per family. A least-squares line and its 95% band are visual summaries; use Spearman for the association test.
 
-For self-rated-performance plots, use the selected receiver-specific models to predict adjustment and absolute initial error across completed ladder ratings. State the age held fixed for predictions and derive 95% mean-response intervals from the fitted model. Preserve the nonresponse exclusion specified above.
+For self-rated-performance plots, scripts 16–17 use trial-level values and separate least-squares regressions within receiver groups, with 95% mean-response bands. These visual summaries are unadjusted for age and differ from the age-adjusted mixed models used for the reported tests. Plot ratings are centered across the pooled plotting sample. Use the sample filters specified above.
 
 ## Output
 
-For each model, export sample sizes, coefficients, standard errors, test statistics, degrees of freedom, p-values and confidence intervals. Include odds ratios for multinomial models and adjusted pairwise contrasts where specified. Record factor references, estimation method and package versions. Compare rounded values with the table-specific CSVs listed in `results/README.md`; these reference values were transcribed, not independently refitted.
+For each model, export sample sizes, coefficients, standard errors, test statistics, degrees of freedom, p-values and confidence intervals. Include odds ratios for multinomial models and adjusted pairwise contrasts where specified. Record factor references, estimation method and package versions. Compare rounded values with the manuscript and supplementary tables.

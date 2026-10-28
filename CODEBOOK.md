@@ -4,7 +4,7 @@ Definitions cover all 66 columns in `data/nemo_analysis_data.csv`, using the sup
 
 Each row is a participant's trial. Questionnaire responses may repeat across trials and family members; summarize once per intended respondent.
 
-`NA` includes uncollected measures, missing responses and undefined adjustment scores. Treat competenceLadder=0 and coopSports=99 as nonresponse for those items only; zero remains valid elsewhere.
+`NA` includes uncollected measures, missing responses and undefined adjustment scores. Treat coopSports=99 as nonresponse for that item.
 
 ## Link observations
 
@@ -35,7 +35,7 @@ Source 0 is anonymous; 1 is the family member; 2 is another adult; 3 is another 
 | socialInfo | Information provided by social source | numeric | system | socialInfo |  |
 | secondEstimate | Estimate after social info | numeric, 1-150 | participant | secondEstimate |  |
 | sourceAge | Age of social source (child only) | years | system | NA for adult sources | NA for adult sources |
-| competenceLadder | Self-efficacy ladder rating | 1 (low) – 10 (high) stick figure on ladder | participant | self efficacy (click on stick figure on ladder: 1=low; 10=high) | Optional item: 0 means not completed. Treat 0 as missing for analysis; stored values are unchanged. |
+| competenceLadder | Self-efficacy ladder rating | 0–10 ladder | participant | self efficacy (click on stick figure on ladder: 1=low; 10=high) |  |
 | trust | General interpersonal trust | 1–7 Likert | participant | "Do you agree with this statement? I see myself as someone who generally trusts other people." (1=disagree strongly; 7=agree strongly) | Single-item |
 | independence | Importance of child independence | 1–7 slider | parent | parent-rated emphasis on... independence |  |
 | obedience | Importance of child obedience | 1–7 slider | parent | … obedience |  |
@@ -57,11 +57,11 @@ Source 0 is anonymous; 1 is the family member; 2 is another adult; 3 is another 
 | ageChild | Child age | years | system |  |  |
 | selfEsteemParent | Child self-esteem | 1-7 ladder | parent | self esteem of child, parent rating on ladder |  |
 | selfEsteemChild | Self-esteem | 1-7 ladder | child | self esteem of child, self rated on ladder |  |
-| agreeParent | Child agreeableness | 2-14 TIPI | parent | agreeableness of child, rated by parent with TIPI, 2-14 | Range: 2–14. Item construction and reverse-scoring details are not supplied. |
+| agreeParent | Child agreeableness | 2-14 TIPI | parent | agreeableness of child, rated by parent with TIPI, 2-14 | Scale: 2–14. |
 | agreeChild | Agreeableness | 1-10 pictorial | child | agreeableness of child, rated with pictorial questionnaire |  |
-| consciParent | Child conscientiousness | 2-14 TIPI | parent | conscientiousness of child, rated by parent with TIPI, 2-14 | Range: 2–14. Item construction and reverse-scoring details are not supplied. |
+| consciParent | Child conscientiousness | 2-14 TIPI | parent | conscientiousness of child, rated by parent with TIPI, 2-14 | Scale: 2–14. |
 | consciChild | Conscientiousness | 1-10 pictorial | child | conscientiousness of child, rated with pictorial questionnaire |  |
-| extravParent | Child extraversion | 2-14 TIPI | parent | extraversion of child, rated by parent with TIPI, 2-14 | Range: 2–14. Item construction and reverse-scoring details are not supplied. |
+| extravParent | Child extraversion | 2-14 TIPI | parent | extraversion of child, rated by parent with TIPI, 2-14 | Scale: 2–14. |
 | extravChild | Extraversion | 1-10 pictorial | child | extraversion of child, rated with pictorial questionnaire |  |
 | schooltype | School type | 1=traditional; 2=free/alternative; 3=other | parent | 1=traditional; 2=free/alternative; 3=other |  |
 | coopSchool | Cooperation at school | 1–4 | parent | degree of cooperation at school (1 = low, 4 = high) |  |
@@ -89,4 +89,4 @@ Source 0 is anonymous; 1 is the family member; 2 is another adult; 3 is another 
 
 ## Definition gaps
 
-`siblingsChild` codes 1/2 are undocumented; the variable was not used in analyses. Parent-rated TIPI scales are 2–14, but item construction and reverse-scoring details are unavailable. Equivalent PSQ and IOS column names are identified in the dictionary.
+`siblingsChild` codes 1/2 are undocumented; the variable was not used in analyses. Parent-rated TIPI scores use a 2–14 scale. Equivalent PSQ and IOS column names are identified in the dictionary.
