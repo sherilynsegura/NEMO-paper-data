@@ -4,6 +4,8 @@ Research data and documentation accompanying the manuscript **Source selection s
 
 Children and caregivers estimate the number of animals, view another person's estimate, and provide a second estimate. The study examines source choice, information weighting, age differences, caregiver–child resemblance, and estimation accuracy.
 
+**Status:** local draft; not yet published to GitHub. Full-data sharing is authorized. The reuse license and remaining analysis specifications need confirmation.
+
 ## Files
 
 | File | Contents |
@@ -17,7 +19,6 @@ Children and caregivers estimate the number of animals, view another person's es
 | `PROVENANCE.md` | Data origin and processing steps. |
 | `CITATION.cff` | Dataset citation metadata. |
 
-<<<<<<< HEAD
 Edited copies of the reported analysis and plotting scripts are in `src/r`. Raw wave files are not included.
 =======
 >>>>>>> a24ad6a86319284b624c139478a670ad8fea50fb
