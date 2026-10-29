@@ -2,17 +2,17 @@
 
 Definitions cover all 66 columns in `data/nemo_analysis_data.csv`, using the supplied codebook, author clarifications and processing documentation. Observed values describe the dataset; they do not define valid scale ranges.
 
-Each row is a participant's trial. Questionnaire responses may repeat across trials and family members; summarize once per intended respondent.
+Each row is a participant's trial. Questionnaire responses may repeat across trials and family members; summarize once per participant.
 
-`NA` includes uncollected measures, missing responses and undefined adjustment scores. Treat coopSports=99 as nonresponse for that item.
+`NA` includes measures that were not collected in a particular wave, missing responses, and undefined adjustment scores. Treat coopSports=99 as a non-response for that item.
 
 ## Link observations
 
-Use `ppt` for participant trials, `group` for sessions and family pairing in waves 1–8, and `dyad` for family pairing in waves 9–10. `subjectNr` identifies the tablet/position within the room. Read numeric IDs as identifiers.
+Use `ppt` for participant trials, `group` for sessions and family pairing in waves 1–8, and `dyad` for family pairing in waves 9–10. `subjectNr` identifies the tablet/position within the testing room. Read numeric IDs as identifiers.
 
 ## Interpret sources
 
-Source 0 is anonymous; 1 is the family member; 2 is another adult; 3 is another child. For children, sources 1/2/3 are vertical/oblique/horizontal; for caregivers, they are vertical/horizontal/oblique. Analyses generally classify age ≤18 as child and >18 as caregiver.
+Source 0 is anonymous (wave 2); 1 is the family member; 2 is another adult; 3 is another child. For children, sources 1/2/3 are vertical/oblique/horizontal; for caregivers, they are vertical/horizontal/oblique. Analyses generally classify age ≤18 as child and >18 as caregiver.
 
 ## Variable dictionary
 
