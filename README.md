@@ -49,6 +49,10 @@ Compare generated statistics with the manuscript and supplementary tables. H1 us
 Analyses use R with dplyr/tidyr, lme4/lmerTest, emmeans and plotting packages. The recorded version list is R 4.6.0, lme4 2.0-1, lmerTest 3.2-1, mclogit 0.9.15, emmeans 2.0.3 and MuMIn 1.48.19. The copied mixed multinomial models use mclogit with participant random intercepts. Each run records its installed package versions and fit warnings.
 
 
+## Additional measures
+
+In addition to the variables used in the manuscript, the dataset contains questionnaire measures collected to explore potential determinants of social information use, including measures of parenting practices, family relationships, and some individual characteristics. These measures were introduced in different data collection waves, partly to address additional research questions pursued in student thesis projects. They are retained to preserve the broader dataset and facilitate secondary analyses, but are not part of the analyses reported in the manuscript. All variables, including their coding and availability across waves, are documented in CODEBOOK.md and codebook.csv.
+
 ## Citation and reuse
 
 See CITATION.cff for citation information.
