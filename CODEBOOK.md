@@ -6,6 +6,8 @@ Each row is a participant's trial. Questionnaire responses may repeat across tri
 
 `NA` includes measures that were not collected in a particular wave, missing responses, and undefined adjustment scores. Treat coopSports=99 as a non-response for that item.
 
+The dataset includes additional questionnaire measures collected for research questions beyond the scope of the accompanying manuscript. These measures are documented here for completeness, although they are not used in the reported analyses.
+
 ## Link observations
 
 Use `ppt` for participant trials, `group` for sessions and family pairing in waves 1–8, and `dyad` for family pairing in waves 9–10. `subjectNr` identifies the tablet/position within the testing room. Read numeric IDs as identifiers.
