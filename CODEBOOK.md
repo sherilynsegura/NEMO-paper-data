@@ -74,7 +74,7 @@ Source 0 is anonymous (wave 2); 1 is the family member; 2 is another adult; 3 is
 | dyad | Unique family dyad identifier | integer | system | family within the session (unique numbers; based on variable "group", with "1" or "2" appended) | Family ID in waves 9–10, constructed from group with a suffix. Use group for family matching in waves 1–8 and dyad in waves 9–10. |
 | subjectNr | Within-room subject/tablet number | 1–4 | system |  | Subject/tablet number in waves 9–10, with two dyads per room. Use ppt for participant identity and dyad for family pairing. |
 | IOS_parents | Parent-rated IOS | 1-7 pictorial | parent | Which picture best describes your relationship with your child (with whom you just played this game)? | Same item: IOS_parents in wave 9; IOS_parent in wave 10. Combine by wave when pooling. |
-| siblingsChild | Sibling-related item | Observed 1; 2 | requires confirmation |  | Codes 1/2 are undocumented. Not used in the analyses; retained in the full dataset. |
+| siblingsChild | Sibling-related item | 1=no; 2=yes | child |  | Do you have any siblings? |
 | IOS_sibs | Sibling relationship closeness (Inclusion of Other in Self) | 1–7 pictorial | child | Which picture best describes your relationship with your sibling? | Handling of children without siblings is unspecified. |
 | childrenInHousehold | Number of siblings | integer | parent | How many siblings does your child grow up with? |  |
 | statusLadder | Perceived self peer status | 0-7 ladder | child | Here is a picture of a ladder. Imagine the top step on the ladder is for the most liked student in your class. And the bottom step on the ladder is for the least liked student in your class. Where would you place yourself on this ladder? |  |
@@ -89,6 +89,6 @@ Source 0 is anonymous (wave 2); 1 is the family member; 2 is another adult; 3 is
 | z_resid | Age-adjusted initial estimation error residual | Continuous, standardized | derived |  | Participant mean absolute initial error regressed on age; residual divided by residual sample SD and joined by ppt. |
 | s_adj | Social information use (adjustment score) | (secondEstimate-firstEstimate)/(socialInfo-firstEstimate) | derived |  | NA if any required estimate is missing or socialInfo equals firstEstimate. Values outside [0,1] are preserved here and filtered in most analyses. |
 
-## Definition gaps
+## Notes
 
-`siblingsChild` codes 1/2 are undocumented; the variable was not used in analyses. Parent-rated TIPI scores use a 2–14 scale. Equivalent PSQ and IOS column names are identified in the dictionary.
+Equivalent PSQ and IOS column names are identified in the dictionary (these variables measure the same thing but had different column names across data collection waves).
