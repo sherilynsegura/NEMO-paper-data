@@ -1,6 +1,6 @@
 # Data provenance
 
-Prepared on 14 October 2026. Permission to share the full dataset was confirmed on that date.
+Prepared on 29 October 2026. Permission to share the full dataset was confirmed on that date.
 
 `data/nemo_analysis_data.csv` is an unchanged copy of `data_processed/NEMO_Combined_data_set_with_adjustment.csv`, renamed for release.
 
