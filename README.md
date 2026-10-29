@@ -42,7 +42,7 @@ Run the scripts from the repository root with `source("src/r/_run_all.R")` in R.
 
 Social information use is quantified as the adjustment from the first to the second estimate, divided by the difference between the first estimate and social information: `s_adj = (secondEstimate − firstEstimate) / (socialInfo − firstEstimate)`. Here, 0 means no revision and 1 means adopting the social information. Undefined scores are `NA`; values outside [0,1] remain in the data for analysis-specific filtering.
 
-H1 uses Spearman correlations across the paired sample and age subsets. H2 uses waves 2 and 4; H3–H5 use waves 1–6. The guide also covers the analyses on source selection, accuracy, self-efficacy and robustness tests for the number of dyads per session. Preregistered exclusions are supplemented by the age-adjusted performance criterion `z_resid ≥ 3` (removing extremely inaccurate estimates, which likely represent mistakes in entering the estimate).
+H1 uses Spearman correlations across the paired sample and age subsets. H2 uses waves 2 and 4; H3–H5 use waves 1–6. The guide also covers the analyses on source selection, accuracy, self-efficacy and robustness tests for the number of dyads per session. Preregistered exclusions are supplemented by the age-adjusted performance criterion `z_resid ≥ 3` (removing extremely poor performers, likely not understanding the task).
 
 Compare generated statistics with the manuscript and supplementary tables. H1 uses Spearman only. See `ANALYSIS_GUIDE.md` for the Wave 2 trial-scope distinction and interval-method limitations.
 
