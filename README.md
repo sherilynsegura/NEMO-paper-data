@@ -22,7 +22,7 @@ Reported analysis and plotting scripts are in `src/r`.
 
 ## Study design
 
-Data were collected at NEMO Science Museum, Amsterdam, across ten waves in 2021–2025. Sources were assigned in waves 1–6 and chosen in waves 7–10. Waves 7–8 used one parent–child dyad per session; waves 9–10 used two. Wave 2 contains ten rounds (including 5 with an unidentified (unknown) source); other waves contain five.
+Data were collected at NEMO Science Museum, Amsterdam, across ten waves in 2021–2025. Sources were assigned in waves 1–6 and chosen in waves 7–10. Waves 7–8 used one parent–child dyad per session; waves 9–10 used two. Wave 2 contains ten rounds (including 5 with an unidentified (anonymous) source); other waves contain five.
 
 Sources include the participant's family member, another adult, and another child. The paired analysis includes 1,281 families. Children aged 6–13 are the main focus; older children are retained in models and age subsets up to 18.
 
