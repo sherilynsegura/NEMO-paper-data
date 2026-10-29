@@ -40,7 +40,7 @@ Read `CODEBOOK.md` before applying `ANALYSIS_GUIDE.md`. Filters differ by analys
 
 Run the scripts from the repository root with `source("src/r/_run_all.R")` in R. Fresh outputs go to `outputs/` by default. Set `NEMO_OUTPUT_DIR` before running to keep generated files outside the repository. See [src/r/README.md](src/r/README.md) for dependencies.
 
-Social information use is quantified as the adjustment from the first to the second estimate, divided by the difference between the first estimate and social information: `s_adj = (secondEstimate − firstEstimate) / (socialInfo − firstEstimate)`:. Here, 0 means no revision and 1 means adopting the social information. Undefined scores are `NA`; values outside [0,1] remain in the data for analysis-specific filtering.
+Social information use is quantified as the adjustment from the first to the second estimate, divided by the difference between the first estimate and social information: `s_adj = (secondEstimate − firstEstimate) / (socialInfo − firstEstimate)`. Here, 0 means no revision and 1 means adopting the social information. Undefined scores are `NA`; values outside [0,1] remain in the data for analysis-specific filtering.
 
 H1 uses Spearman correlations across the paired sample and age subsets. H2 uses waves 2 and 4; H3–H5 use waves 1–6. The guide also covers the analyses on source selection, accuracy, self-efficacy and robustness tests for the number of dyads per session. Preregistered exclusions are supplemented by the age-adjusted performance criterion `z_resid ≥ 3` (removing extremely inaccurate estimates, which likely represent mistakes in entering the estimate).
 
